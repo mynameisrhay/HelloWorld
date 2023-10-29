@@ -1,4 +1,5 @@
 # 2nd exercise. simple weight converter from lbs to kgs vice versa. this won't use the IF function
+# this was meant to be simpler but I tried adding the IF function. original purpose is to convert lbs to kgs. 
 
 weight = float(input("What is your weight? "))
 weight_unit = input("Is it in (K)gs or (L)bs? ")
