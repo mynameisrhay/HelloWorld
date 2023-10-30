@@ -2,11 +2,18 @@
 
 numbers = [1, 5, 6, 8, 8, 6, 4, 9, 12, 7]
 
-i = 0
-max_num = numbers[0]
-while not i == len(numbers):
-    if numbers[i] > max_num:
-        max_num = numbers[i]
-    i += 1
+# i = 0
+# max_num = numbers[0]
+# while not i == len(numbers):
+#     if numbers[i] > max_num:
+#         max_num = numbers[i]
+#     i += 1
+#
+# print("Largest number is " + str(max_num))
 
-print("Largest number is " + str(max_num))
+max_num = numbers[0]
+for number in numbers:
+    if max_num < number:
+        max_num = number
+
+print(max_num)
