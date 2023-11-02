@@ -1,7 +1,8 @@
-numbers = [1, 2, 3]
-numbers_copy = numbers.copy()
-
-numbers_copy[0] = 9
+numbers = (1, 2, 3)
+# numbers_copy = numbers.copy()
+numbers_copy = list(numbers)
 
 print(numbers)
+print(numbers_copy)
+numbers_copy[0] = 9
 print(numbers_copy)
