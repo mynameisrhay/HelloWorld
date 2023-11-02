@@ -1,8 +1,5 @@
-numbers = (1, 2, 3)
-# numbers_copy = numbers.copy()
-numbers_copy = list(numbers)
+def greet_user(first_name, last_name):
+    print(f"Hello {first_name} {last_name}!")
 
-print(numbers)
-print(numbers_copy)
-numbers_copy[0] = 9
-print(numbers_copy)
+
+greet_user("John", "Smith")
