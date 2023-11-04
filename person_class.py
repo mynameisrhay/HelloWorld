@@ -9,3 +9,6 @@ class Person:
 
 raymond = Person("Raymond Bautista")
 raymond.talk()
+
+john_smith = Person("John Smith")
+john_smith.talk()
