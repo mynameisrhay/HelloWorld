@@ -21,3 +21,8 @@ if response.upper() == "Y":
             print(f"'{dir_name}' folder does not exists")
     else:
         print(f"Did not delete the {dir_name} folder.")
+
+print("Printing out the files in the current directory: ")
+path = Path()
+for file in path.glob("*"):
+    print(file)
