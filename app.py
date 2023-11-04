@@ -1,19 +1,20 @@
-# practice using packages. will not practice using "as" at this point of practice.
+# practice path and libraries. will use pathlib module
 
-# 1st approach, import the module under python package by using only import. this will make the code longer.
-import ecommerce.shipping
+from pathlib import Path
 
-ecommerce.shipping.calc_total()
-ecommerce.shipping.calc_total()
+path = Path("emails")
 
-# 2nd approach, use from and call package and module then import function. a bit shorter
-from ecommerce.shipping import calc_total
-
-calc_total()
-calc_total()
-
-# 3rd approach, use from and call package, then import module
-from ecommerce import shipping
-
-shipping.calc_total()
-shipping.calc_total()
+response = input("Create 'emails' folder? (Y/N): ")
+if response.upper() == "Y":
+    if not path.exists():
+        path.mkdir()
+        print("Created the 'emails' folder.")
+        response = input("Delete 'emails' folder? (Y/N): ")
+        if response.upper() == "Y":
+            if not path.exists():
+                path.rmdir()
+                print("Removed the 'emails' folder.")
+            else:
+                print("'emails' folder does not exists")
+    else:
+        print("emails folder already exists")
