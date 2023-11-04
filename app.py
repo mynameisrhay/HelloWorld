@@ -2,19 +2,22 @@
 
 from pathlib import Path
 
-path = Path("emails")
+dir_name = input("Input the name of the directory that you want to create: ")
+path = Path(dir_name)
 
-response = input("Create 'emails' folder? (Y/N): ")
+response = input(f"Create '{dir_name}' folder? (Y/N): ")
 if response.upper() == "Y":
     if not path.exists():
         path.mkdir()
-        print("Created the 'emails' folder.")
-        response = input("Delete 'emails' folder? (Y/N): ")
-        if response.upper() == "Y":
-            if not path.exists():
-                path.rmdir()
-                print("Removed the 'emails' folder.")
-            else:
-                print("'emails' folder does not exists")
+        print(f"Created the '{dir_name}' folder.")
     else:
-        print("emails folder already exists")
+        print(f"{dir_name} folder already exists")
+    response = input(f"Delete '{dir_name}' folder? (Y/N): ")
+    if response.upper() == "Y":
+        if path.exists():
+            path.rmdir()
+            print(f"Removed the '{dir_name}' folder.")
+        else:
+            print(f"'{dir_name}' folder does not exists")
+    else:
+        print(f"Did not delete the {dir_name} folder.")
