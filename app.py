@@ -1,6 +1,10 @@
-def greet_user(first_name, last_name):
-    return first_name + " " + last_name
+class Point:
+    def move(self):
+        print("move")
+
+    def draw(self):
+        print("draw")
 
 
-full_name = greet_user('John', 'Smith')
-print(f"Full name based on greet_user function is {full_name}")
+point1 = Point()
+point1.move()
